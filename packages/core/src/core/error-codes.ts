@@ -18,6 +18,7 @@ export const ErrorCategory = {
   IDEMPOTENCY: "idempotency",
   COMPLIANCE: "compliance",
   REVISION: "revision",
+  EMPLOYEE: "employee",
 } as const;
 
 export type ErrorCategoryType =
@@ -379,6 +380,16 @@ export const ERROR_CODE_REGISTRY: Record<string, ErrorCodeEntry> = {
     retryable: false,
     suggestedMessage:
       "The revision request is invalid. Please review the required identifiers and approver.",
+  },
+
+  // ── Employee Eligibility ────────────────────────────────────────────────
+  EMPLOYEE_ELIGIBILITY_VALIDATION_FAILED: {
+    category: ErrorCategory.EMPLOYEE,
+    meaning:
+      "A request to evaluate employee payroll eligibility failed local validation (missing employee address, unrecognized lifecycle status, or compliance holds supplied without an employer id).",
+    retryable: false,
+    suggestedMessage:
+      "The employee eligibility request is invalid. Please review the employee address, status, and compliance hold inputs.",
   },
 };
 

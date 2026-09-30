@@ -209,6 +209,10 @@ export * from "./privacy/redaction";
 // Employee Reference ID Validator (#388)
 export * from "./employees/referenceId";
 
+// Employee Eligibility Status Evaluation (#612)
+export * from "./employees/eligibility";
+export { EmployeeEligibilityValidationError } from "./employees/errors";
+
 // Typed payroll approval request builder
 export * from "./approval";
 

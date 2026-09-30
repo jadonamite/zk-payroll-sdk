@@ -340,6 +340,8 @@ export const DEFAULT_ERROR_MESSAGES: Record<string, string> = {
     "This revision is already approved. Pass { allowReapproval: true } to re-approve it intentionally.",
   REVISION_VALIDATION_FAILED:
     "The revision request is invalid. Please review the required identifiers and approver.",
+  EMPLOYEE_ELIGIBILITY_VALIDATION_FAILED:
+    "The employee eligibility request is invalid. Please review the employee address, status, and compliance hold inputs.",
 };
 
 /** Custom message overrides keyed by error code. */
@@ -486,6 +488,7 @@ const CATEGORY_MAP: Record<string, string> = {
   REVISION_APPROVED_EDIT_BLOCKED: "Revision",
   REVISION_ALREADY_APPROVED: "Revision",
   REVISION_VALIDATION_FAILED: "Revision",
+  EMPLOYEE_ELIGIBILITY_VALIDATION_FAILED: "Employee",
 };
 
 const RETRYABLE_CODES = new Set<string>(
